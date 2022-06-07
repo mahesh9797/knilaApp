@@ -1,0 +1,19 @@
+<div>
+    <!--Navbar-->
+     <div class="contact-navbar">
+         <ul>
+             <li [routerLink]="['view-contact']"  routerLinkActive="active-nav">View</li>
+             <li [routerLink]="['add-contact']" routerLinkActive="active-nav">Add Contact</li>
+             <li [routerLink]="['map-view']" routerLinkActive="active-nav">Map View</li>
+             <li routerLink="/login">Logout</li>           
+         </ul>
+     </div>
+     <div class="contact-router-container">
+     <router-outlet></router-outlet>
+     </div>
+     <!--Footer-->
+     <div class="contact-footer">
+         <span>Knila app v1.0</span>
+     </div>
+ </div>
+ 

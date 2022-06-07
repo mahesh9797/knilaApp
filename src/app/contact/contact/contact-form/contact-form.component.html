@@ -1,0 +1,124 @@
+<div>
+  <form
+    [formGroup]="contactForm"
+    class="contact-form-cotainer"
+    (ngSubmit)="onFormSubmit()"
+  >
+    <div>
+      <div class="form-control">
+        <label>First Name</label
+        ><input
+          type="text"
+          formControlName="firstName"
+          [ngClass]="{
+            'error-input': isValidated && !contactForm.value.firstName
+          }"
+          autocomplete="off"
+          required
+        />
+      </div>
+      <div class="form-control">
+        <label>Last Name</label
+        ><input
+          type="text"
+          formControlName="lastName"
+          [ngClass]="{
+            'error-input': isValidated && !contactForm.value.lastName
+          }"
+          autocomplete="off"
+          required
+        />
+      </div>
+    </div>
+    <div>
+      <div class="form-control">
+        <label>Email</label
+        ><input
+          type="text"
+          formControlName="email"
+          [ngClass]="{ 'error-input': isValidated && !contactForm.value.email }"
+          autocomplete="off"
+          required
+        />
+      </div>
+      <div class="form-control">
+        <label>Phone Number</label
+        ><input
+          type="text"
+          formControlName="phoneNo"
+          [ngClass]="{
+            'error-input': isValidated && !contactForm.value.phoneNo
+          }"
+          autocomplete="off"
+          required
+        />
+      </div>
+    </div>
+    <div>
+      <div class="form-control">
+        <label>Address</label
+        ><input
+          type="text"
+          formControlName="address"
+          [ngClass]="{
+            'error-input': isValidated && !contactForm.value.address
+          }"
+          autocomplete="off"
+          required
+        />
+      </div>
+      <div class="form-control">
+        <label>City</label
+        ><input
+          type="text"
+          formControlName="city"
+          [ngClass]="{ 'error-input': isValidated && !contactForm.value.city }"
+          autocomplete="off"
+          required
+        />
+      </div>
+    </div>
+    <div>
+      <div class="form-control">
+        <label>State</label
+        ><input
+          type="text"
+          formControlName="state"
+          [ngClass]="{ 'error-input': isValidated && !contactForm.value.state }"
+          autocomplete="off"
+          required
+        />
+      </div>
+      <div class="form-control">
+        <label>Country</label
+        ><input
+          type="text"
+          formControlName="country"
+          [ngClass]="{
+            'error-input': isValidated && !contactForm.value.country
+          }"
+          autocomplete="off"
+          required
+        />
+      </div>
+    </div>
+
+    <div>
+      <div class="form-control">
+        <label>Postal Code</label
+        ><input
+          type="text"
+          formControlName="postalCode"
+          [ngClass]="{
+            'error-input': isValidated && !contactForm.value.postalCode
+          }"
+          autocomplete="off"
+          required
+        />
+      </div>
+      <div class="form-control">
+        <button type="submit">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>

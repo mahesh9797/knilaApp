@@ -1,0 +1,38 @@
+<div class="login-outer-container">
+    <div class="login-container">
+      <div class="login-header">Knila App</div>
+      <div>
+        <form
+          class="form-container"
+          #loginForm="ngForm"
+          (ngSubmit)="onLoginCLick(loginForm)"
+        >
+          <div class="form-control">
+            <label>Username</label
+            ><input
+              type="text"
+              [(ngModel)]="userName"
+              name="userName"
+              [ngClass]="{ 'error-input': isValidated && !userName }"
+              autocomplete="off"
+              required
+            />
+          </div>
+          <div class="form-control">
+            <label>Password</label
+            ><input
+              type="password"
+              [(ngModel)]="password"
+              name="userName"
+              [ngClass]="{ 'error-input': isValidated && !password }"
+              required
+            />
+          </div>
+          <div class="btn-container">
+            <button type="submit">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

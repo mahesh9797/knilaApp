@@ -1,0 +1,41 @@
+<div>
+  <div style="padding-left: 15px"><h2>Contact Details</h2></div>
+  <div *ngIf="userList && userList.length" class="grid-container">
+    <table>
+      <tr>
+        <th (click)="sortRows('firstName')">First Name</th>
+        <th (click)="sortRows('lastName')">Last Name</th>
+        <th (click)="sortRows('email')">Email</th>
+        <th (click)="sortRows('phoneNo')">Phone Number</th>
+        <th (click)="sortRows('address')">Address</th>
+        <th (click)="sortRows('city')">City</th>
+        <th (click)="sortRows('state')">State</th>
+        <th (click)="sortRows('country')">Country</th>
+        <th (click)="sortRows('postalCode')">Postal Code</th>
+        <th>Edit</th>
+      </tr>
+      <tr *ngFor="let user of userList; let ind = index">
+        <td>{{ user.firstName }}</td>
+        <td>{{ user.lastName }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.phoneNo }}</td>
+        <td>{{ user.address }}</td>
+        <td>{{ user.city }}</td>
+        <td>{{ user.state }}</td>
+        <td>{{ user.country }}</td>
+        <td>{{ user.postalCode }}</td>
+        <td>
+          <button
+            (click)="onEditClick(user.id)"
+            style="width: fit-content; padding: 5px"
+          >
+            Edit
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div *ngIf="!userList || !userList.length" class="user-not-found">
+    <h2>No Users Found</h2>
+  </div>
+</div>
